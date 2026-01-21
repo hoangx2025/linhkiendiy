@@ -13,7 +13,7 @@ export default function HomePage() {
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <div style={{ width: 40, height: 40, borderRadius: 12, background: "linear-gradient(135deg, var(--brand), var(--brand2))", boxShadow: "var(--shadow)" }} />
           <div>
-            <div style={{ fontSize: 18, fontWeight: 800 }}>Shop DIY</div>
+            <div style={{ fontSize: 18, fontWeight: 800 }}>Linh kiện DIY Hà Nội</div>
             <div style={{ color: "var(--muted)", fontSize: 14, marginTop: 2 }}>Danh sách sản phẩm • 2 trang (List + Detail)</div>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function HomePage() {
       </div>
 
       <footer style={{ color: "var(--muted)", fontSize: 13, padding: "22px 0" }}>
-        © {new Date().getFullYear()} Shop DIY.
+        © {new Date().getFullYear()} Linh kiện DIY Hà Nội.
       </footer>
     </main>
   );

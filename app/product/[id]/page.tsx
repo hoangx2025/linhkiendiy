@@ -107,7 +107,7 @@ export default async function ProductPage({ params }: PageProps) {
 
         <div className="brand-pill">
           <span className="brand-dot" />
-          <span className="brand-text">Shop DIY</span>
+          <span className="brand-text">Linh kiện DIY Hà Nội</span>
         </div>
       </div>
 
