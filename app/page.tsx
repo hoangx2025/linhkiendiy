@@ -3,7 +3,7 @@ import { products } from "@/data/products";
 import LogoIcon from "@/components/icons/LogoIcon";
 
 export const metadata = {
-  title: "Danh sách sản phẩm",
+  title: "Danh sách sản phẩm DIY: buck/boost, cảm biến, linh kiện.",
   description: "Danh sách sản phẩm DIY: buck/boost, cảm biến, linh kiện."
 };
 
