@@ -10,17 +10,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main>
-      <header style={{ display: "flex", gap: 16, alignItems: "center", justifyContent: "space-between", padding: "16px 0 10px", flexWrap: "wrap" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <LogoIcon size={48} className="logo-color" />
-          <div>
-            <div style={{ fontSize: 18, fontWeight: 800 }}>Linh kiện DIY Hà Nội</div>
-          </div>
-        </div>
-
-        <div className="pill">{products.length} sản phẩm</div>
-      </header>
-
       <section className="hero">
         <h1 style={{ margin: 0, fontSize: 24 }}>Danh sách sản phẩm</h1>
         <p style={{ margin: 0, color: "var(--muted)", lineHeight: 1.55 }}>
@@ -52,10 +41,6 @@ export default function HomePage() {
           </Link>
         ))}
       </div>
-
-      <footer style={{ color: "var(--muted)", fontSize: 13, padding: "22px 0" }}>
-        © {new Date().getFullYear()} Linh kiện DIY Hà Nội.
-      </footer>
     </main>
   );
 }

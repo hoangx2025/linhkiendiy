@@ -102,15 +102,6 @@ export default async function ProductPage({ params }: PageProps) {
   return (
     <main style={{ paddingTop: 12 }}>
       {/* Header */}
-     <div className="product-topbar">
-        <a href="/" className="back-pill">← Quay lại</a>
-
-        <div className="brand-pill">
-         <LogoIcon size={32} className="logo-color"/>
-          <span className="brand-text">Linh kiện DIY Hà Nội</span>
-        </div>
-      </div>
-
       {/* SEO JSON-LD */}
       <script
         type="application/ld+json"
@@ -208,10 +199,6 @@ export default async function ProductPage({ params }: PageProps) {
           </div>
         </aside>
       </div>
-
-      <footer style={{ color: "var(--muted)", fontSize: 13, padding: "22px 0" }}>
-        © {new Date().getFullYear()} Shop DIY
-      </footer>
     </main>
   );
 }
