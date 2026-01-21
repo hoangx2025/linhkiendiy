@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { products } from "@/data/products";
+import LogoIcon from "@/components/icons/LogoIcon";
 
 export const metadata = {
   title: "Danh sách sản phẩm",
@@ -11,7 +12,7 @@ export default function HomePage() {
     <main>
       <header style={{ display: "flex", gap: 16, alignItems: "center", justifyContent: "space-between", padding: "16px 0 10px", flexWrap: "wrap" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <div style={{ width: 40, height: 40, borderRadius: 12, background: "linear-gradient(135deg, var(--brand), var(--brand2))", boxShadow: "var(--shadow)" }} />
+          <LogoIcon size={48} className="logo-color" />
           <div>
             <div style={{ fontSize: 18, fontWeight: 800 }}>Linh kiện DIY Hà Nội</div>
             <div style={{ color: "var(--muted)", fontSize: 14, marginTop: 2 }}>Danh sách sản phẩm • 2 trang (List + Detail)</div>

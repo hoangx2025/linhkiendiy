@@ -461,3 +461,7 @@ a {
 .share-line:hover {
   opacity: 0.75;
 }
+
+.logo-color {
+  color: #da9c16;
+}

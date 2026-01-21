@@ -10,7 +10,7 @@ import CopyLinkButton from "@/components/CopyLinkButton";
 import ShareButton from "@/components/ShareButton";
 import ShareIcon from "@/components/icons/ShareIcon";
 import ShareLine from "@/components/ShareLine";
-
+import LogoIcon from "@/components/icons/LogoIcon";
 /* ============================
    Types (Next.js 15 chuẩn)
 ============================ */
@@ -106,7 +106,7 @@ export default async function ProductPage({ params }: PageProps) {
         <a href="/" className="back-pill">← Quay lại</a>
 
         <div className="brand-pill">
-          <span className="brand-dot" />
+         <LogoIcon size={32} className="logo-color"/>
           <span className="brand-text">Linh kiện DIY Hà Nội</span>
         </div>
       </div>
