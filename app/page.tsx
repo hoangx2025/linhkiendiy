@@ -15,7 +15,6 @@ export default function HomePage() {
           <LogoIcon size={48} className="logo-color" />
           <div>
             <div style={{ fontSize: 18, fontWeight: 800 }}>Linh kiện DIY Hà Nội</div>
-            <div style={{ color: "var(--muted)", fontSize: 14, marginTop: 2 }}>Danh sách sản phẩm • 2 trang (List + Detail)</div>
           </div>
         </div>
 
