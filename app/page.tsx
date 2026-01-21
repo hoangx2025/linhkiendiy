@@ -13,7 +13,7 @@ export default function HomePage() {
       <section className="hero">
         <h1 style={{ margin: 0, fontSize: 24 }}>Danh sách sản phẩm</h1>
         <p style={{ margin: 0, color: "var(--muted)", lineHeight: 1.55 }}>
-          SEO: Server-rendered, metadata chuẩn, OpenGraph, robots, sitemap/robots, và Product JSON-LD ở trang chi tiết.
+          Đang cập nhật...
         </p>
       </section>
 

@@ -181,12 +181,10 @@ export default async function ProductPage({ params }: PageProps) {
               border: "0.5px solid var(--border)",
             }}>
               <h3 style={{ margin: "0 0 8px", fontSize: 14 }}>
-                Tối ưu SEO
+                Tính năng
               </h3>
               <ul style={{ margin: 0, paddingLeft: 18 }}>
-                <li>Product + Breadcrumb JSON-LD</li>
-                <li>Metadata render server</li>
-                <li>URL chuẩn SEO</li>
+                <li>Đang cập nhật...</li>
               </ul>
             </div>
 
