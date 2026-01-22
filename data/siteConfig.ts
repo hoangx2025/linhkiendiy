@@ -2,7 +2,7 @@ export const siteConfig = {
   showPrice: false, // ← đổi true / false ở đây
 
   contact: {
-    phone: "+84901234567",
+    phone: "+840000000000",
     email: "contact@shopdiy.vn",
   }
 };
