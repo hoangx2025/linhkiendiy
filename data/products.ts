@@ -94,7 +94,6 @@ export const products: Product[] = [
 
     notes: [
       "Có sụt áp 0 - 0.3V do điện trở đo dòng (hiện tượng bình thường)",
-      "Không dùng module không có CC để sạc pin",
       "Nên tăng cường tản nhiệt khi dùng công suất cao",
     ],
 
