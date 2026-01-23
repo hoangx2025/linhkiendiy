@@ -59,11 +59,11 @@ export const products: Product[] = [
       },
       {
         key: "Dòng đầu ra",
-        value: "3A ổn định, tối đa 4A (khi tản nhiệt tốt)",
+        value: "3A, tối đa 4A",
       },
       {
         key: "Công suất",
-        value: "35W (tản nhiệt tự nhiên), 60W (có tản nhiệt)",
+        value: "35W/60W (có tản nhiệt)",
       },
       {
         key: "Hiệu suất",
