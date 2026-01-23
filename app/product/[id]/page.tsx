@@ -226,16 +226,16 @@ export default async function ProductPage({ params }: PageProps) {
                   <div className="contact-line">
                     <PhoneIcon />
                     <a
-                      href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                      href={`tel:${(process.env.NEXT_PUBLIC_PHONE ?? "0123-456-789").replace(/\s/g, "")}`}
                     >
-                      {siteConfig.contact.phone}
+                      {process.env.PHONE}
                     </a>
                   </div>
 
                   <div className="contact-line">
                     <MailIcon />
-                    <a href={`mailto:${siteConfig.contact.email}`}>
-                      {siteConfig.contact.email}
+                    <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+                      {process.env.NEXT_PUBLIC_EMAIL}
                     </a>
                   </div>
                 </div>
