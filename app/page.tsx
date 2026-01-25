@@ -36,9 +36,9 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="card-footer">
+              {/* <div className="card-footer">
                 <span className="view-link">Xem chi tiết →</span>
-              </div>
+              </div> */}
             </div>
           </Link>
         ))}
