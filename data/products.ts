@@ -21,6 +21,10 @@ export const products: Product[] = [
   tp4056TypeCProtected
 ];
 
-export function getProductById(id: string) {
-  return products.find((p) => p.id === id);
+// export function getProductById(id: string) {
+//   return products.find((p) => p.id === id);
+// }
+
+export function getProductById(id: string): Product | undefined {
+  return products.find(p => p.id === id);
 }

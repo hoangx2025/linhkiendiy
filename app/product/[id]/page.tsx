@@ -11,7 +11,7 @@ import ShareButton from "@/components/ShareButton";
 import ShareIcon from "@/components/icons/ShareIcon";
 import ShareLine from "@/components/ShareLine";
 import LogoIcon from "@/components/icons/LogoIcon";
-import type { StockStatus } from "@/data/products";
+import type { StockStatus } from "@/data/product";
 
 const STOCK_STATUS_MAP: Record<
   StockStatus,
