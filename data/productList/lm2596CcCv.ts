@@ -1,6 +1,6 @@
 import { Product } from "../product";
 
-export const hcSr501: Product = {
+export const lm2596CcCv: Product = {
   id: "lm2596-cc-cv",
   name: "Module Buck LM2596S CC/CV 3A",
   short:

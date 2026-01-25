@@ -7,6 +7,8 @@ export const metadata = {
   description: "Danh sách sản phẩm DIY: buck/boost, cảm biến, linh kiện."
 };
 
+console.log("PRODUCTS:", products);
+
 export default function HomePage() {
   return (
     <main>
