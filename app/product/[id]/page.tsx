@@ -223,14 +223,14 @@ export default async function ProductPage({ params }: PageProps) {
                 </div>
               ) : (
                 <div style={{ fontSize: 15, lineHeight: 1.6 }}>
-                  <div className="contact-line">
+                  {/* <div className="contact-line">
                     <PhoneIcon />
                     <a
                       href={`tel:${(process.env.NEXT_PUBLIC_PHONE ?? "0123-456-789").replace(/\s/g, "")}`}
                     >
                       {process.env.PHONE}
                     </a>
-                  </div>
+                  </div> */}
 
                   <div className="contact-line">
                     <MailIcon />

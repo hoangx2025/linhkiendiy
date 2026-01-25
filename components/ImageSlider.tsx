@@ -10,9 +10,10 @@ export default function ImageSlider({
   altBase: string;
 }) {
   const [index, setIndex] = useState(0);
+  const [showFull, setShowFull] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto slide 3s
+  // Auto slide
   useEffect(() => {
     startAuto();
     return stopAuto;
@@ -33,8 +34,8 @@ export default function ImageSlider({
   };
 
   return (
-    <div>
-      {/* Ảnh lớn */}
+    <>
+      {/* Main image */}
       <div
         className="main-image"
         onMouseEnter={stopAuto}
@@ -43,8 +44,19 @@ export default function ImageSlider({
         <img
           src={images[index]}
           alt={`${altBase} - ảnh ${index + 1}`}
+          onClick={() => setShowFull(true)}
         />
 
+        {/* Expand icon */}
+        <button
+          className="expand-btn"
+          onClick={() => setShowFull(true)}
+          aria-label="Xem ảnh lớn"
+        >
+          ⛶
+        </button>
+
+        {/* Nav buttons */}
         <button
           className="nav-btn left"
           onClick={() =>
@@ -64,7 +76,7 @@ export default function ImageSlider({
         </button>
       </div>
 
-      {/* Thumbnail */}
+      {/* Thumbnails */}
       <div className="thumb-list">
         {images.map((img, i) => (
           <div
@@ -76,6 +88,14 @@ export default function ImageSlider({
           </div>
         ))}
       </div>
-    </div>
+
+      {/* Fullscreen preview */}
+      {showFull && (
+        <div className="image-modal" onClick={() => setShowFull(false)}>
+          <img src={images[index]} alt="preview" />
+          <span className="close-btn">✕</span>
+        </div>
+      )}
+    </>
   );
 }
