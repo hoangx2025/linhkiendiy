@@ -129,7 +129,7 @@ export default async function ProductPage({ params }: PageProps) {
   };
 
   return (
-    <main style={{ paddingTop: 12 }}>
+    <main style={{ paddingTop: 0 }}>
       {/* Header */}
       {/* SEO JSON-LD */}
       <script
@@ -142,12 +142,12 @@ export default async function ProductPage({ params }: PageProps) {
       />
 
       {/* Hero */}
-      <section className="hero">
+      {/* <section className="hero">
         <h1 style={{ margin: 0, fontSize: 24 }}>{p.name}</h1>
         <p style={{ margin: 0, color: "var(--muted)", lineHeight: 1.55 }}>
           {p.short}
         </p>
-      </section>
+      </section> */}
 
       {/* Content */}
       <div
@@ -155,8 +155,7 @@ export default async function ProductPage({ params }: PageProps) {
         style={{
           display: "grid",
           gridTemplateColumns: "1.2fr .8fr",
-          gap: 18,
-          marginTop: 16,
+          gap: 18
         }}
       >
         {/* Left */}
