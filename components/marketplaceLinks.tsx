@@ -31,7 +31,7 @@ export default function MarketplaceLinks({
           const meta = MARKETPLACE_META[item.platform];
           if (!meta) return null;
 
-          const url = item.affiliateUrl || item.productUrl;
+          const url = item.affiliateUrl || item.productUrl || process.env.NEXT_PUBLIC_SHOPEE_HOME_PAGE;
 
           return (
             <a

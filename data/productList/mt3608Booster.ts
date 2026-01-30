@@ -57,4 +57,10 @@ export const mt3608Booster: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mt3608Booster-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890823&Signature=T9RE8SXKMwYWfcpLXySeQYFELrE%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mt3608Booster-4.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890826&Signature=%2BvhibTuF074xpAE50cqvo78SiP8%3D",
   ],
+   marketplaces: [
+    {
+      platform: "shopee",
+      productUrl:""
+    }
+  ],
 };

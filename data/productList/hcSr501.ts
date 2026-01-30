@@ -62,4 +62,10 @@ export const hcSr501: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/hr-sr501-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890185&Signature=yOExSokOKDxt7YbuRP7V%2Bd8LfCk%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/hr-sr501-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890188&Signature=LobJ%2Fv%2BnjwP5G01Mik%2Byh1git%2Fc%3D"
   ],
+   marketplaces: [
+    {
+      platform: "shopee",
+      productUrl: "https://vn.shp.ee/nTqMjLV"
+    }
+  ],
 };

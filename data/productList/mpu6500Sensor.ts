@@ -65,4 +65,10 @@ export const mpu6500Sensor: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mpu6500-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084891054&Signature=pmVJFwJSzKbficnVcDTGINwh85E%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mpu6500-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084891058&Signature=lI7pP2B2AqMEJGtl6XfYR6TaLAE%3D",
   ],
+   marketplaces: [
+    {
+      platform: "shopee",
+      productUrl: "https://vn.shp.ee/UaNVBqG"
+    }
+  ],
 };

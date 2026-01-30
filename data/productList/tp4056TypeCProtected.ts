@@ -56,4 +56,10 @@ export const tp4056TypeCProtected: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/tp4056TypeCProtected-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084892002&Signature=RNyfapcZjiCuUAQPZbEvUuWVsN0%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/tp4056TypeCProtected-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084892006&Signature=v2FrpX929LtazKnE7lDvFR05uNQ%3D",
   ],
+   marketplaces: [
+    {
+      platform: "shopee",
+      productUrl:""
+    }
+  ],
 };

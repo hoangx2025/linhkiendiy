@@ -59,4 +59,10 @@ export const irfz44nMossfet: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/irfz44n-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890482&Signature=cdivmeTjIc5sFo6%2FSUFWkwD%2BcLE%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/irfz44n-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890485&Signature=ft56M5X3KkwvK%2BQ%2BMvDRJBiQuKc%3D"
   ],
+   marketplaces: [
+    {
+      platform: "shopee",
+      productUrl: ""
+    }
+  ],
 };

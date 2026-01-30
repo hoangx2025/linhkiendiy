@@ -84,4 +84,10 @@ export const lightSensorLm393: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/z7458101249172_002c76e63c7517eaaf3981213f7c4eef.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084716373&Signature=g%2Fdf7H8GS%2BnyMt3ZpFrjgBbUF4M%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/z7458101273943_3f710365deb2d7a3f9cb995a6d0403bd.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084716377&Signature=Mi0MGbi%2FQOZfpbkt9hcPM71F494%3D",
   ],
+   marketplaces: [
+    {
+      platform: "shopee",
+      productUrl: "https://vn.shp.ee/vdHmazY"
+    }
+  ],
 };
