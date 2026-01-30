@@ -20,7 +20,16 @@ export default function ShareLine() {
   return (
     <div className="contact-line share-line" onClick={handleShare}>
       <ShareIcon />
-      <span>Chia sẻ</span>
+      <span
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "6px 0",
+          fontSize: 14,
+        }}
+      >
+        Chia sẻ
+      </span>
     </div>
   );
 }

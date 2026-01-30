@@ -57,10 +57,16 @@ export const mt3608Booster: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mt3608Booster-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890823&Signature=T9RE8SXKMwYWfcpLXySeQYFELrE%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mt3608Booster-4.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084890826&Signature=%2BvhibTuF074xpAE50cqvo78SiP8%3D",
   ],
-   marketplaces: [
+  marketplaces: [
     {
       platform: "shopee",
-      productUrl:""
-    }
+      productUrl: "",
+    },
+  ],
+  usage_steps: [
+    "Bước 1: Kết nối nguồn - Hàn dây vào hai lỗ VIN+ và VIN- (2V-24V). Lưu ý đúng cực.",
+    "Bước 2: Chuẩn bị đo - Dùng đồng hồ VOM thang đo Áp (DC) đặt vào hai lỗ VOUT+ và VOUT-.",
+    "Bước 3: Điều chỉnh áp - Xoay biến trở xanh dương ngược chiều kim đồng hồ để tăng điện áp đầu ra. Lưu ý: Lần đầu sử dụng có thể cần xoay nhiều vòng (10-20 vòng) mới thấy điện áp thay đổi.",
+    "Bước 4: Kiểm tra tải - Sau khi chỉnh xong áp mong muốn, mới tiến hành kết nối thiết bị vào đầu ra.",
   ],
 };

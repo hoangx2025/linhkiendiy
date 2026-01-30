@@ -56,10 +56,16 @@ export const tp4056TypeCProtected: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/tp4056TypeCProtected-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084892002&Signature=RNyfapcZjiCuUAQPZbEvUuWVsN0%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/tp4056TypeCProtected-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084892006&Signature=v2FrpX929LtazKnE7lDvFR05uNQ%3D",
   ],
-   marketplaces: [
+  marketplaces: [
     {
       platform: "shopee",
-      productUrl:""
-    }
+      productUrl: "",
+    },
+  ],
+  usage_steps: [
+    "Bước 1: Kết nối Pin - Hàn cực dương của pin vào điểm B+, cực âm của pin vào điểm B-. (Rất quan trọng: Không được ngược cực).",
+    "Bước 2: Kết nối Tải - Hàn thiết bị sử dụng (như mạch tăng áp MT3608) vào hai điểm OUT+ và OUT-. Không nên lấy nguồn trực tiếp từ B+/B- để đảm bảo tính năng bảo vệ xả.",
+    "Bước 3: Cấp nguồn sạc - Sử dụng cáp USB Type-C cắm vào module. Đèn đỏ sẽ sáng báo hiệu đang sạc.",
+    "Bước 4: Theo dõi - Khi pin đạt 4.2V, đèn đỏ tắt và đèn xanh/lam sáng lên, mạch tự động ngắt dòng sạc để bảo vệ pin.",
   ],
 };

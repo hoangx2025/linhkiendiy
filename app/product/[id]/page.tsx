@@ -197,8 +197,15 @@ export default async function ProductPage({ params }: PageProps) {
 
           <div className="card" style={{ marginTop: 16 }}>
             <div style={{ padding: 16 }}>
-              <h2 style={{ margin: "0 0 8px", fontSize: 16 }}>Mô tả</h2>
-              <p style={{ margin: 0, color: "var(--muted)", lineHeight: 1.65 }}>
+              <h2 style={{ margin: "0 0 8px", fontSize: 14 }}>Mô tả</h2>
+              <p
+                style={{
+                  margin: 0,
+                  color: "var(--muted)",
+                  lineHeight: 1.65,
+                  fontSize: 14,
+                }}
+              >
                 {p.description}
               </p>
 
@@ -219,11 +226,11 @@ export default async function ProductPage({ params }: PageProps) {
           <div style={{ padding: 16 }}>
             <div style={{ marginTop: 12 }}>
               {siteConfig.showPrice ? (
-                <div style={{ fontSize: 22, fontWeight: 700 }}>
+                <div style={{ fontSize: 14, fontWeight: 700 }}>
                   {new Intl.NumberFormat("vi-VN").format(p.price)} {p.currency}
                 </div>
               ) : (
-                <div style={{ fontSize: 15, lineHeight: 1.6 }}>
+                <div style={{ fontSize: 14, lineHeight: 1.6 }}>
                   {/* <div className="contact-line">
                     <PhoneIcon />
                     <a
@@ -252,7 +259,7 @@ export default async function ProductPage({ params }: PageProps) {
                 border: "0.5px solid var(--border)",
               }}
             >
-              <h3 style={{ margin: "0 0 8px", fontSize: 14 }}>Thông số</h3>
+              <h2 style={{ margin: "0 0 8px", fontSize: 14 }}>Thông số</h2>
               <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
                 {p.specifications.map((spec, index) => (
                   <li
@@ -262,7 +269,7 @@ export default async function ProductPage({ params }: PageProps) {
                       justifyContent: "space-between",
                       padding: "6px 0",
                       borderBottom: "1px dashed var(--border)",
-                      fontSize: 13,
+                      fontSize: 14,
                     }}
                   >
                     <span style={{ color: "var(--muted)" }}>{spec.key}</span>
@@ -273,23 +280,16 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
             {p.notes?.length > 0 && (
               <>
-                <h4
-                  style={{
-                    marginTop: 16,
-                    marginBottom: 6,
-                    fontSize: 13,
-                    fontWeight: 600,
-                  }}
-                >
+                <h2 style={{ marginTop: 16, marginBottom: 6, fontSize: 14 }}>
                   Lưu ý
-                </h4>
+                </h2>
 
                 <ul
                   style={{
                     margin: 0,
                     paddingLeft: 16,
                     color: "var(--muted)",
-                    fontSize: 13,
+                    fontSize: 14,
                     lineHeight: 1.6,
                   }}
                 >
@@ -308,6 +308,47 @@ export default async function ProductPage({ params }: PageProps) {
           </div>
         </aside>
       </div>
+
+      {/* =======================
+   HƯỚNG DẪN SỬ DỤNG
+======================= */}
+      {p.usage_steps && p.usage_steps.length > 0 && (
+        <div
+          className="card"
+          style={{
+            marginTop: 24,
+            padding: 20,
+            borderRadius: 14,
+            border: "1px solid var(--border)",
+            background: "#fff",
+          }}
+        >
+          <h3
+            style={{
+              margin: "0 0 12px",
+              fontSize: 14,
+            }}
+          >
+            Hướng dẫn sử dụng
+          </h3>
+
+          <ol
+            style={{
+              margin: 0,
+              paddingLeft: 20,
+              fontSize: 14,
+              lineHeight: 1.8,
+              color: "var(--muted)",
+            }}
+          >
+            {p.usage_steps.map((step, index) => (
+              <li key={index} style={{ marginBottom: 8 }}>
+                {step}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
     </main>
   );
 }

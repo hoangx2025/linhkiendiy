@@ -65,10 +65,16 @@ export const mpu6500Sensor: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mpu6500-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084891054&Signature=pmVJFwJSzKbficnVcDTGINwh85E%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/mpu6500-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084891058&Signature=lI7pP2B2AqMEJGtl6XfYR6TaLAE%3D",
   ],
-   marketplaces: [
+  marketplaces: [
     {
       platform: "shopee",
-      productUrl: "https://vn.shp.ee/UaNVBqG"
-    }
+      productUrl: "https://vn.shp.ee/UaNVBqG",
+    },
+  ],
+  usage_steps: [
+    "Bước 1: Kết nối nguồn - Chân VCC nối 3.3V hoặc 5V, chân GND nối cực âm. Lưu ý: Chip MPU-6500 thực tế chạy 1.8V-3.3V, nhưng module GY thường có sẵn IC hạ áp.",
+    "Bước 2: Chọn chuẩn giao tiếp - Mặc định dùng I2C (SCL/SDA). Nếu dùng SPI, cần kết nối các chân SCL (SCLK), SDA (MOSI), AD0 (MISO) và NCS (CS).",
+    "Bước 3: Cài đặt địa chỉ I2C - Chân AD0 dùng để chọn địa chỉ. Nếu nối GND, địa chỉ là 0x68. Nếu nối VCC, địa chỉ là 0x69.",
+    "Bước 4: Khởi tạo phần mềm - Sử dụng các thư viện như MPU6500_t3 hoặc MPU9250 (tương thích ngược) để đọc giá trị RAW từ cảm biến, sau đó tính toán góc nghiêng.",
   ],
 };

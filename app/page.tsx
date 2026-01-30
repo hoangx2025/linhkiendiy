@@ -28,7 +28,7 @@ export default function HomePage() {
 
             <div className="card-body">
               <h2 className="title">{p.name}</h2>
-              <p className="meta">{p.short}</p>
+              <p className="meta" style={{fontSize: 14 }}>{p.short}</p>
 
               <div className="tags">
                 {p.tags.map(t => (

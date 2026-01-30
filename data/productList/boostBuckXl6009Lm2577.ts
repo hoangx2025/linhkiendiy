@@ -93,4 +93,10 @@ export const boostBuckXl6009Lm2577: Product = {
       productUrl: "https://vn.shp.ee/CqoAAUF"
     }
   ],
+  usage_steps: [
+    "Bước 1: Chỉnh Áp (CV) - Cấp nguồn vào Input. Để đồng hồ VOM ở thang đo điện áp, đo hai đầu Output. Xoay biến trở 'V-ADJ' (biến trở CV) cho đến khi đạt điện áp mong muốn.",
+    "Bước 2: Chỉnh Dòng (CC) - Chuyển đồng hồ VOM sang thang đo dòng 10A, chập trực tiếp que đo vào Output. Xoay biến trở 'I-ADJ' (biến trở CC) cho đến khi đạt giới hạn dòng điện cần thiết.",
+    "Bước 3: Kiểm tra đèn báo - LED 'CC' sẽ sáng khi mạch rơi vào trạng thái dòng hằng. LED 'FULL' sẽ sáng khi dòng điện ra nhỏ hơn mức báo đầy đã được cài đặt mặc định.",
+    "Lưu ý đặc biệt: Vì đây là mạch Buck-Boost, bạn có thể chỉnh Output 12V ngay cả khi Input chỉ là 5V hoặc lên tới 24V."
+  ],
 };

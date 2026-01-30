@@ -27,6 +27,7 @@ export type Product = {
   usage: string[];
   notes: string[];
   marketplaces?: MarketplaceLink[]; 
+  usage_steps?: string[]; 
 };
 
 export type ProductSpecification = {

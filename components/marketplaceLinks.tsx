@@ -8,7 +8,7 @@ export default function MarketplaceLinks({
   if (!links?.length) return null;
 
   return (
-    <div
+    <div  className="card" 
       style={{
         marginTop: 16,
         padding: 14,
