@@ -58,4 +58,10 @@ export const lm2596CcCv: Product = {
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/lm2596s-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084714957&Signature=4OwGrIO70ohvFV67yCZ8S8xu1%2Fo%3D",
     "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/lm2596s-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2084714959&Signature=r8jGl9KBD8S3Sh3%2BgpOu%2BNq43ic%3D",
   ],
+  marketplaces: [
+    {
+      platform: "shopee",
+      productUrl: "https://vn.shp.ee/kPbnRho"
+    }
+  ],
 };

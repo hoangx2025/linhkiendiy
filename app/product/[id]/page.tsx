@@ -12,6 +12,7 @@ import ShareIcon from "@/components/icons/ShareIcon";
 import ShareLine from "@/components/ShareLine";
 import LogoIcon from "@/components/icons/LogoIcon";
 import type { StockStatus } from "@/data/product";
+import MarketplaceLinks from "@/components/marketplaceLinks";
 
 const STOCK_STATUS_MAP: Record<
   StockStatus,
@@ -38,7 +39,6 @@ const STOCK_STATUS_MAP: Record<
     bg: "#eff6ff",
   },
 };
-
 
 /* ============================
    Types (Next.js 15 chuẩn)
@@ -163,9 +163,10 @@ export default async function ProductPage({ params }: PageProps) {
         <div>
           <div style={{ position: "relative" }}>
             <ImageSlider images={p.images} altBase={p.name} />
+            {p.marketplaces && <MarketplaceLinks links={p.marketplaces} />}
 
             {/* Stock status badge */}
-            {(() => {
+            {/* {(() => {
               const status = STOCK_STATUS_MAP[p.stockStatus];
 
               return (
@@ -174,7 +175,7 @@ export default async function ProductPage({ params }: PageProps) {
                     position: "absolute",
                     bottom: 12,
                     right: 12,
-                    padding: "4px 9px",     
+                    padding: "4px 9px",
                     borderRadius: 999,
                     fontSize: 12,
                     fontWeight: 600,
@@ -185,13 +186,13 @@ export default async function ProductPage({ params }: PageProps) {
                     alignItems: "center",
                     gap: 6,
                     zIndex: 10,
-                    border: `1px solid ${status.color}`
+                    border: `1px solid ${status.color}`,
                   }}
                 >
                   {status.label}
                 </div>
               );
-            })()}
+            })()} */}
           </div>
 
           <div className="card" style={{ marginTop: 16 }}>

@@ -1,3 +1,5 @@
+import { MarketplaceLink } from "./marketplaceLink";
+
 export type StockStatus =
   | "in_stock"
   | "low_stock"
@@ -24,6 +26,7 @@ export type Product = {
   images: string[];
   usage: string[];
   notes: string[];
+  marketplaces?: MarketplaceLink[]; 
 };
 
 export type ProductSpecification = {
