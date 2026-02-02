@@ -77,5 +77,5 @@ export const hcSr501: Product = {
     "Bước 3: Chỉnh thời gian trễ (Time Delay) - Xoay biến trở bên phải theo chiều kim đồng hồ để tăng thời gian giữ đèn sáng (tối đa 200s), ngược lại để giảm.",
     "Bước 4: Chọn chế độ Jumper - Cắm Jumper vào vị trí H (Repeat Trigger) nếu muốn cảm biến luôn giữ mức cao miễn là vẫn có người chuyển động trong vùng quét.",
   ],
-  youtubeUrl: "https://youtube.com/shorts/ABWdcRHOI40",
+  youtubeUrl: "https://youtube.com/shorts/ABWdcRHOI40?feature=share",
 };

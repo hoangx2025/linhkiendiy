@@ -1,21 +1,8 @@
 "use client";
 
+import { extractYoutubeId } from "@/utils/youtube";
 import { useEffect, useRef, useState } from "react";
 
-/* ===== helper: lấy videoId từ link youtube ===== */
-function extractYoutubeId(url?: string) {
-  if (!url) return null;
-  try {
-    const u = new URL(url);
-    if (u.hostname.includes("youtube.com")) {
-      return u.searchParams.get("v");
-    }
-    if (u.hostname === "youtu.be") {
-      return u.pathname.slice(1);
-    }
-  } catch {}
-  return null;
-}
 
 export default function ImageSlider({
   images,
@@ -31,15 +18,9 @@ export default function ImageSlider({
   const [showVideo, setShowVideo] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
-
-  const [mediaSize, setMediaSize] = useState<{ w: number; h: number } | null>(
-    null
-  );
-
   const videoId = extractYoutubeId(youtubeUrl);
 
-  /* ===== auto slide (chỉ chạy khi đang xem ảnh) ===== */
+  // Auto slide (chỉ khi đang xem ảnh)
   useEffect(() => {
     if (!showVideo) startAuto();
     return stopAuto;
@@ -59,74 +40,54 @@ export default function ImageSlider({
     }
   };
 
-  /* ===== lấy kích thước ảnh đang hiển thị ===== */
-  const captureImageSize = () => {
-    if (!imageRef.current) return;
-    const rect = imageRef.current.getBoundingClientRect();
-    setMediaSize({
-      w: rect.width,
-      h: rect.height,
-    });
-  };
-
-  /* resize theo window */
-  useEffect(() => {
-    if (!imageRef.current) return;
-
-    const ro = new ResizeObserver(() => {
-      captureImageSize();
-    });
-
-    ro.observe(imageRef.current);
-    return () => ro.disconnect();
-  }, [index]);
-
   return (
     <>
-      {/* ================= MAIN IMAGE / VIDEO ================= */}
+      {/* Main image container (GIỮ IMG để giữ kích thước) */}
       <div
         className="main-image"
         onMouseEnter={stopAuto}
         onMouseLeave={() => !showVideo && startAuto()}
         style={{
           position: "relative",
-          width: "100%",
           overflow: "hidden",
-          background: "#000",
           borderRadius: 12,
+          background: "#000",
         }}
       >
-        {!showVideo ? (
-          <img
-            ref={imageRef}
-            src={images[index]}
-            alt={`${altBase} - ảnh ${index + 1}`}
-            onLoad={captureImageSize}
-            onClick={() => setShowFull(true)}
+        {/* IMG luôn tồn tại để giữ height/layout */}
+        <img
+          src={images[index]}
+          alt={`${altBase} - ảnh ${index + 1}`}
+          onClick={() => !showVideo && setShowFull(true)}
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            objectFit: "contain",
+            // Khi xem video: ẩn ảnh nhưng vẫn giữ layout
+            opacity: showVideo ? 0 : 1,
+            pointerEvents: showVideo ? "none" : "auto",
+            cursor: showVideo ? "default" : "zoom-in",
+          }}
+        />
+
+        {/* IFRAME overlay lên trên ảnh */}
+        {showVideo && videoId && (
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1`}
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowFullScreen
             style={{
+              position: "absolute",
+              inset: 0,
               width: "100%",
               height: "100%",
-              objectFit: "contain",
-              cursor: "zoom-in",
+              border: 0,
             }}
           />
-        ) : (
-          videoId &&
-          mediaSize && (
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              style={{
-                width: mediaSize.w,
-                height: mediaSize.h,
-                border: 0,
-              }}
-            />
-          )
         )}
 
-        {/* expand icon – chỉ khi là ảnh */}
+        {/* Expand icon (chỉ khi là ảnh) */}
         {!showVideo && (
           <button
             className="expand-btn"
@@ -137,7 +98,7 @@ export default function ImageSlider({
           </button>
         )}
 
-        {/* nav buttons – chỉ khi là ảnh */}
+        {/* Nav buttons (chỉ khi là ảnh) */}
         {!showVideo && (
           <>
             <button
@@ -148,11 +109,10 @@ export default function ImageSlider({
             >
               ‹
             </button>
+
             <button
               className="nav-btn right"
-              onClick={() =>
-                setIndex((i) => (i + 1) % images.length)
-              }
+              onClick={() => setIndex((i) => (i + 1) % images.length)}
             >
               ›
             </button>
@@ -160,14 +120,12 @@ export default function ImageSlider({
         )}
       </div>
 
-      {/* ================= THUMBNAILS ================= */}
+      {/* Thumbnails */}
       <div className="thumb-list">
         {images.map((img, i) => (
           <div
             key={i}
-            className={`thumb-item ${
-              !showVideo && i === index ? "active" : ""
-            }`}
+            className={`thumb-item ${!showVideo && i === index ? "active" : ""}`}
             onClick={() => {
               setIndex(i);
               setShowVideo(false);
@@ -177,27 +135,40 @@ export default function ImageSlider({
           </div>
         ))}
 
-        {/* video thumbnail */}
+        {/* Video thumb (nằm đúng ô khoanh đỏ) */}
         {videoId && (
           <div
-            className={`thumb-item video-thumb ${
-              showVideo ? "active" : ""
-            }`}
+            className={`thumb-item video-thumb ${showVideo ? "active" : ""}`}
             onClick={() => {
               stopAuto();
               setShowVideo(true);
             }}
+            style={{ position: "relative" }}
           >
             <img
               src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
               alt="video-thumb"
             />
-            <span className="play-icon">▶</span>
+            <span
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#fff",
+                fontSize: 18,
+                background: "rgba(0,0,0,.35)",
+                borderRadius: 8,
+              }}
+            >
+              ▶
+            </span>
           </div>
         )}
       </div>
 
-      {/* ================= FULLSCREEN IMAGE ================= */}
+      {/* Fullscreen preview (chỉ ảnh) */}
       {showFull && !showVideo && (
         <div className="image-modal" onClick={() => setShowFull(false)}>
           <img src={images[index]} alt="preview" />

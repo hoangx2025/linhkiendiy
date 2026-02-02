@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { extractYoutubeId } from "@/utils/youtube";
+import { useState } from "react";
 
 export default function YoutubeThumb({ url }: { url: string }) {
   const [open, setOpen] = useState(false);
