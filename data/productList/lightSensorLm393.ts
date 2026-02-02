@@ -96,4 +96,5 @@ export const lightSensorLm393: Product = {
     "Bước 3: Lấy tín hiệu DO - Nối chân DO vào chân tín hiệu của MCU hoặc chân B của Transistor (như BC547) để điều khiển tải lớn hơn.",
     "Lưu ý trạng thái chân DO: Thông thường, khi TRỜI SÁNG (vượt ngưỡng) -> DO mức Thấp (0V). Khi TRỜI TỐI (dưới ngưỡng) -> DO mức Cao (5V).",
   ],
+  youtubeUrl: "https://youtube.com/shorts/ABWdcRHOI40",
 };
