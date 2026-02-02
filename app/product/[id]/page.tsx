@@ -13,6 +13,7 @@ import ShareLine from "@/components/ShareLine";
 import LogoIcon from "@/components/icons/LogoIcon";
 import type { StockStatus } from "@/data/product";
 import MarketplaceLinks from "@/components/marketplaceLinks";
+import YoutubeThumb from "@/components/YoutubeThumb";
 
 const STOCK_STATUS_MAP: Record<
   StockStatus,
@@ -155,13 +156,18 @@ export default async function ProductPage({ params }: PageProps) {
         style={{
           display: "grid",
           gridTemplateColumns: "1.2fr .8fr",
-          gap: 18
+          gap: 18,
         }}
       >
         {/* Left */}
         <div>
           <div style={{ position: "relative" }}>
-            <ImageSlider images={p.images} altBase={p.name} />
+            <ImageSlider
+              images={p.images}
+              altBase={p.name}
+              youtubeUrl={p.youtubeUrl}
+            />
+
             {p.marketplaces && <MarketplaceLinks links={p.marketplaces} />}
 
             {/* Stock status badge */}

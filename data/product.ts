@@ -28,6 +28,7 @@ export type Product = {
   notes: string[];
   marketplaces?: MarketplaceLink[]; 
   usage_steps?: string[]; 
+  youtubeUrl?: string;
 };
 
 export type ProductSpecification = {

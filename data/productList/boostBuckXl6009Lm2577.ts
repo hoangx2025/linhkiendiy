@@ -99,4 +99,5 @@ export const boostBuckXl6009Lm2577: Product = {
     "Bước 3: Kiểm tra đèn báo - LED 'CC' sẽ sáng khi mạch rơi vào trạng thái dòng hằng. LED 'FULL' sẽ sáng khi dòng điện ra nhỏ hơn mức báo đầy đã được cài đặt mặc định.",
     "Lưu ý đặc biệt: Vì đây là mạch Buck-Boost, bạn có thể chỉnh Output 12V ngay cả khi Input chỉ là 5V hoặc lên tới 24V."
   ],
+   youtubeUrl: "https://youtu.be/LaBiz1TeT58?si=Emu125TNMQyPHGHJ", 
 };
