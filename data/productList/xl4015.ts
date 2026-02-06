@@ -51,9 +51,9 @@ export const xl4015: Product ={
     "Bước 4: Kết nối tải vào đầu ra sau khi đã hoàn tất các bước cân chỉnh."
   ],
   images: [
-    "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/xl4015-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2085922114&Signature=%2FZ6dvzID15QMv1ucU00JdHBfb28%3D",
-    "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/xl4015-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2085922120&Signature=BU6UebDLcyFSiIrJRcxD%2BMuwivM%3D",
-    "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/xl4015-1.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2085922124&Signature=V5XrtV3yDmDOdnueuPTAIBA7WBA%3D"
+    "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/xl4015-1.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2085923191&Signature=gxz9eKdmn0oJbWHXTCzINkhLgHM%3D",
+    "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/xl4015-2.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2085923193&Signature=4Tal%2FSv83Z%2FfORLg%2F4HLLCc4Hvs%3D",
+    "https://ower.s3.ap-southeast-1.amazonaws.com/linhkiendiy/xl4015-3.jpg?AWSAccessKeyId=AKIAWYTKPUQQQYECZMZG&Expires=2085923196&Signature=k8OzutBZcUI6yRHdr3xS3qKLpXc%3D"
   ],
   marketplaces: [
     {
