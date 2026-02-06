@@ -8,10 +8,12 @@ import { irfz44nMossfet } from "./productList/irfz44nMossfet";
 import { mt3608Booster } from "./productList/mt3608Booster";
 import { mpu6500Sensor } from "./productList/mpu6500Sensor";
 import { tp4056TypeCProtected } from "./productList/tp4056TypeCProtected";
+import { xl4015 } from "./productList/xl4015";
 
 
 export const products: Product[] = [
   boostBuckXl6009Lm2577,
+  xl4015,
   lm2596CcCv,
   hcSr501,
   lightSensorLm393,
