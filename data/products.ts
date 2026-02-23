@@ -9,6 +9,7 @@ import { mt3608Booster } from "./productList/mt3608Booster";
 import { mpu6500Sensor } from "./productList/mpu6500Sensor";
 import { tp4056TypeCProtected } from "./productList/tp4056TypeCProtected";
 import { xl4015 } from "./productList/xl4015";
+import { hlkLd2410C } from "./productList/hlkLd2410C";
 
 
 export const products: Product[] = [
@@ -20,7 +21,8 @@ export const products: Product[] = [
   irfz44nMossfet,
   mt3608Booster,
   mpu6500Sensor,
-  tp4056TypeCProtected
+  tp4056TypeCProtected,
+  hlkLd2410C
 ];
 
 // export function getProductById(id: string) {
