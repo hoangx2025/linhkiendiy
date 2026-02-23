@@ -10,6 +10,7 @@ import { mpu6500Sensor } from "./productList/mpu6500Sensor";
 import { tp4056TypeCProtected } from "./productList/tp4056TypeCProtected";
 import { xl4015 } from "./productList/xl4015";
 import { hlkLd2410C } from "./productList/hlkLd2410C";
+ 
 
 
 export const products: Product[] = [
@@ -22,7 +23,8 @@ export const products: Product[] = [
   mt3608Booster,
   mpu6500Sensor,
   tp4056TypeCProtected,
-  hlkLd2410C
+  hlkLd2410C,
+  max30102Sensor
 ];
 
 // export function getProductById(id: string) {
