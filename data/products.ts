@@ -10,6 +10,7 @@ import { mpu6500Sensor } from "./productList/mpu6500Sensor";
 import { tp4056TypeCProtected } from "./productList/tp4056TypeCProtected";
 import { xl4015 } from "./productList/xl4015";
 import { hlkLd2410C } from "./productList/hlkLd2410C";
+import { max30102Sensor } from "./productList/max30102Sensor";
  
 
 
